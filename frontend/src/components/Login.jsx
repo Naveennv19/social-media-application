@@ -35,7 +35,7 @@ const Login = () => {
     }
   };
 
-// added comment
+// added comment 2
   return (
     <div className="login-container">
       <div className="login-box">
