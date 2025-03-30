@@ -1,0 +1,141 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+  color: white;
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Login Box */
+.login-box {
+  background-color: #1c1c1c;
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+/* Instagram Logo */
+.login-title {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Brush Script MT', cursive;
+  margin-bottom: 20px;
+}
+
+/* Input Fields */
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  background-color: #262626;
+  color: white;
+  outline: none;
+}
+
+/* Login Button */
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1877f2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.login-button:hover {
+  background-color: #0f5cb6;
+}
+
+/* OR Divider */
+.or-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.line {
+  width: 40%;
+  height: 1px;
+  background-color: #444;
+}
+
+.or-text {
+  padding: 0 10px;
+  color: #888;
+  font-size: 12px;
+}
+
+/* Facebook Login */
+.fb-login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4267B2;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.fb-login-button:hover {
+  background-color: #365899;
+}
+
+.fb-icon {
+  width: 18px;
+}
+
+/* Forgot Password */
+.forgot-password {
+  display: block;
+  margin-top: 10px;
+  color: #b3b3b3;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Signup Box */
+.signup-box {
+  background-color: #1c1c1c;
+  padding: 15px;
+  width: 350px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.signup-link {
+  color: #0095f6;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}
