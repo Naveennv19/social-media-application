@@ -10,7 +10,11 @@ dotenv.config();
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+    origin: "http://localhost:5173", 
+    methods: ["GET", "POST"],
+    credentials: true
+}));
 
 
 const MONGO_URI = process.env.MONGO_URI;
@@ -33,32 +37,37 @@ app.get('/', (req, res) => {
 });
 
 app.post('/signup', async function (req,res){
-    const username = req.body.username;
-    const email = req.body.email;
+    const username = req.body.userName;
+    const email = req.body.emailAddress;
     const password = req.body.password;
     const mobileNumber= req.body.mobileNumber;
     const fullName =req.body.fullName;
-
-
+    
+    console.log("Request Body:", req.body); 
 
     await UserModel.create({
-        email : email,
-        mobileNumber:mobileNumber,
+        userName : username,
+        emailAddress : email,
         password : password,
-        username : username,
-        fullName:fullName
+        mobileNumber: mobileNumber,
+        fullName: fullName
     });
+    
     res.json({
         message: "You are signed up"
     })
 });
 
 app.post('/login', async function (req,res){
-    const email = req.body.email;
+    const identifier = req.body.identifier;
     const password = req.body.password;
 
     const user = await UserModel.findOne({
-        email: email,
+        $or: [
+            { emailAddress: identifier },
+            { userName: identifier },
+            { mobileNumber: identifier }
+        ],
         password: password
     });
 

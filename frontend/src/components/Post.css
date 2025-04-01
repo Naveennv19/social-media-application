@@ -1,0 +1,12 @@
+.post {
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  .post-img {
+    width: 100%;
+    border-radius: 8px;
+  }
+  

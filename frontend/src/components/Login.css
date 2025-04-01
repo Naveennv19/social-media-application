@@ -32,8 +32,8 @@ body {
 .login-title {
   font-size: 32px;
   font-weight: bold;
-  font-family: 'Brush Script MT', cursive;
-  margin-bottom: 20px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
 }
 
 /* Input Fields */
